@@ -1,0 +1,44 @@
+﻿@model Tarea_01_Introduccion_.Models.Personas
+@{
+    ViewData["Title"] = "Agregar_Persona";
+}
+
+<h1>Agregar Pariente</h1>
+<h6>Complete los siguientes campos para agregar un nuevo pariente.</h6>
+
+<br />
+<br />
+
+
+<div>
+    <form action="Agregar_Persona" method="post" class="justify-content-center">
+        <div class="form-group">
+            <label>Nombre</label>
+            <input class="form-control" name="Nombre" placeholder="Nombre">
+        </div>
+        <div class="form-group">
+            <label>Apellido</label>
+            <input class="form-control" name="Apellido" placeholder="Apellido">
+        </div>
+        <div class="form-group">
+            <label>Apodo</label>
+            <input class="form-control" name="Apodo" placeholder="Apodo">
+        </div>
+        <div class="form-group">
+            <label>Teléfono</label>
+            <input class="form-control" name="Telefono" placeholder="Teléfono">
+        </div>
+        <div class="form-group">
+            <label>E-Mail</label>
+            <input class="form-control" name="Email" placeholder="E-Mail">
+        </div>
+        <div class="form-group">
+            <label>Relación</label>
+            <input class="form-control" name="Relacion" placeholder="Relación">
+        </div>
+        <div class="d-flex">
+            <input id="Submit1" type="submit" value="Hecho" class="btn bg-success " />
+            <button type="button" style="margin-left: 10px;" class="btn btn-info align-content-md-around"><a style="color:white;" asp-action="Index">Volver</a></button>
+        </div>
+    </form>
+</div>

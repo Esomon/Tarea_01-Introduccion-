@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Tarea_01_Introduccion_.Models.Personas>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Agenda Familiar</h1>
+<br />
+<br />
+
+<div class="col col-12 table-responsive">
+    <table style="margin-top= 15px; " class="table table-light table-striped table-hover ">
+        <thead style="background-color:#735E53; color:white;">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Apodo</th>
+                <th>Teléfono</th>
+                <th>E-Mail</th>
+                <th>Relación</th>
+
+            </tr>
+        </thead>
+        <tbody background-color:#F2F2F2;">
+            @foreach (var person in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => person.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => person.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => person.Apodo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => person.Telefono)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => person.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => person.Relacion)
+                </td>
+            </tr>
+            }
+
+        </tbody>
+
+    </table>
+    <div>
+        <p>
+            <button type="button" class="btn btn-success"><a class="text-decoration-none" style="color:white;" asp-action="Agregar_Persona">Añadir Pariente</a></button>
+
+        </p>
+
+    </div>
+</div>
+
+
